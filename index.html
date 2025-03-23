@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco di Monty Hall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="result-overlay" class="result-overlay">
+        <div id="result-message" class="result-message"></div>
+    </div>
+    
+    <div class="container">
+        <div class="game-controls">
+            <div class="control-group">
+                <label for="doors-number">Numero di porte:</label>
+                <input type="number" id="doors-number" min="3" max="100" value="3">
+                <button id="start-game">Inizia Gioco</button>
+            </div>
+            <div id="game-message" class="message"></div>
+        </div>
+        
+        <div id="doors-container" class="doors-container"></div>
+        
+        <div id="decision-buttons" class="decision-buttons hidden">
+            <button id="stay-button">Rimani con la tua scelta</button>
+            <button id="switch-button">Cambia porta</button>
+        </div>
+        
+        <div class="statistics">
+            <h2>Statistiche</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Strategia: Rimanendo</h3>
+                    <h3>Vittorie</h3>
+                    <p id="stay-wins">0</p>
+                    <h3>% Vittorie</h3>
+                    <p id="stay-win-percentage">0.0%</p>
+                    <h3>% Attesa</h3>
+                    <p id="expected-stay-percentage">33.3%</p>
+                    <h3>Partite</h3>
+                    <p id="stay-total">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Strategia: Cambiando</h3>
+                    <h3>Vittorie</h3>
+                    <p id="switch-wins">0</p>
+                    <h3>% Vittorie</h3>
+                    <p id="switch-win-percentage">0.0%</p>
+                    <h3>% Attesa</h3>
+                    <p id="expected-switch-percentage">66.7%</p>
+                    <h3>Partite</h3>
+                    <p id="switch-total">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
